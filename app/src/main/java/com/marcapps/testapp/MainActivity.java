@@ -1,5 +1,6 @@
 package com.marcapps.testapp;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -10,8 +11,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    public String[] questions = new String[]{"!False", "!True"};
-    public boolean[] answers = new boolean[]{true,false};
+    public String[] questions = new String[]{"!False", "!True","Click false","Click true"};
+    public boolean[] answers = new boolean[]{true,false,false,true};
     public int index = 0;
 
     public TextView question;
@@ -26,31 +27,41 @@ public class MainActivity extends AppCompatActivity {
         question = findViewById(R.id.question);
         trueButton = findViewById(R.id.trueButton);
         falseButton = findViewById(R.id.falseButton);
+
+        nextQuestion();
     }
 
     public void selectTrue(View v) {
-        if (answers[index] == true) {
+        if (answers[index-1] == true) {
             toast("CORRECT!");
         } else {
             toast("INCORRECT!");
         }
+        nextQuestion();
     }
 
     public void selectFalse(View v) {
-        if (answers[index] == false) {
+        if (answers[index-1] == false) {
             toast("CORRECT!");
         } else {
             toast("INCORRECT!");
         }
+        nextQuestion();
     }
 
     public void toast(String text) {
-        Toast t = new Toast.makeText(1);
+        Toast toast = Toast.makeText(this, text, Toast.LENGTH_LONG);
+        toast.show();
     }
 
     public void nextQuestion() {
-        question.setText(questions[index]);
-        index++;
+        if (index < answers.length) {
+            question.setText(questions[index]);
+            index++;
+        } else {
+            question.setText("END");
+        }
+
     }
 
 }
