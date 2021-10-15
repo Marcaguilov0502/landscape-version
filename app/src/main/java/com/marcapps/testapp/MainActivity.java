@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void toast(String text) {
-        Toast t = new Toast.makeText();
+        Toast t = new Toast.makeText(1);
     }
 
     public void nextQuestion() {
