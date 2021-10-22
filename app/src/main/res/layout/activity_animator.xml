@@ -1,6 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <Button
+        android:id="@+id/animatorSet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:onClick="animate"
+        android:text="Animator set"
+        app:layout_constraintStart_toStartOf="@+id/valueAnimator"
+        app:layout_constraintTop_toBottomOf="@+id/valueAnimator" />
+
+    <Button
+        android:id="@+id/objectAnimator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="animate"
+        android:text="Object animator"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.168"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.106" />
+
+    <TextView
+        android:id="@+id/value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Value"
+        app:layout_constraintStart_toStartOf="@+id/objectAnimator"
+        app:layout_constraintTop_toBottomOf="@+id/objectAnimator" />
+
+    <Button
+        android:id="@+id/valueAnimator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:onClick="animate"
+        android:text="Value Animator"
+        app:layout_constraintStart_toStartOf="@+id/value"
+        app:layout_constraintTop_toBottomOf="@+id/value" />
+
+    <Button
+        android:id="@+id/springAnimation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:onClick="animate"
+        android:text="Spring Animation"
+        app:layout_constraintStart_toStartOf="@+id/animatorSet"
+        app:layout_constraintTop_toBottomOf="@+id/animatorSet" />
 </android.support.constraint.ConstraintLayout>

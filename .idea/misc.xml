@@ -4,9 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/marca/AndroidStudioProjects/testApp/app/src/main/res/layout-land/activity_main.xml" value="0.1728395061728395" />
-        <entry key="..\:/Users/marca/AndroidStudioProjects/testApp/app/src/main/res/layout/activity_animator.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/marca/AndroidStudioProjects/testApp/app/src/main/res/layout/activity_animator.xml" value="0.22" />
         <entry key="..\:/Users/marca/AndroidStudioProjects/testApp/app/src/main/res/layout/activity_gestures.xml" value="0.5" />
         <entry key="..\:/Users/marca/AndroidStudioProjects/testApp/app/src/main/res/layout/activity_landscapeversion.xml" value="0.11730072463768115" />
+        <entry key="..\:/Users/marca/AndroidStudioProjects/testApp/app/src/main/res/layout/activity_layouts_constraint.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/marca/AndroidStudioProjects/testApp/app/src/main/res/layout/activity_layouts_linear.xml" value="0.18" />
+        <entry key="..\:/Users/marca/AndroidStudioProjects/testApp/app/src/main/res/layout/activity_layouts_relative.xml" value="0.15" />
         <entry key="..\:/Users/marca/AndroidStudioProjects/testApp/app/src/main/res/layout/activity_main.xml" value="0.2" />
       </map>
     </option>

@@ -21,6 +21,7 @@
         <activity android:name=".LandscapeVersionActivity"/>
         <activity android:name=".GesturesActivity"/>
         <activity android:name=".AnimatorActivity"/>
+        <activity android:name=".LayoutsActivity"/>
     </application>
 
 </manifest>

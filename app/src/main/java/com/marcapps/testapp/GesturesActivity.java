@@ -8,8 +8,6 @@ import android.view.MotionEvent;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.Vector;
-
 public class GesturesActivity extends AppCompatActivity implements
         GestureDetector.OnGestureListener,
         GestureDetector.OnDoubleTapListener {
@@ -154,16 +152,21 @@ public class GesturesActivity extends AppCompatActivity implements
     }
 
     public void updateDistance(int dx, int dy) {
-        int total = (int) Math.sqrt((dx*dx)+(dy^dy));
-        distance.setText("Distance: X="+dx+" , Y="+dy+" , T="+total);
+        int total = (int) Math.sqrt((dx*dx)+(dy*dy));
+        distance.setText("Distance: DX="+dx+" , DY="+dy+" , TD="+total);
     }
 
     public void updateAngle(double dx, double dy) {
         if (dx != 0) {
-            double alfa = (Math.atan(dy/dx))*57.2958;
+            double alfa = ((Math.atan(dy/dx))*57.2958)+90;
             if (dx < 0) { alfa += 180;}
-            else if (dy < 0) {alfa+=360;}
             angle.setText("Angle: " + (int) alfa + "º");
+        } else {
+            if (dy < 0) {
+                angle.setText("Angle: 180º");
+            } else if (dy == 0) {
+                angle.setText("Angle: 0º");
+            }
         }
     }
 

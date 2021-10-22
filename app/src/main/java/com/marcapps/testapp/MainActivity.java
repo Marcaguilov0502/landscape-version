@@ -8,12 +8,16 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
+    /*  ToDoList:
+
+        spring animations
+        fling animations
+     */
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
     }
 
     public void selectActivity(View v) {
@@ -26,7 +30,10 @@ public class MainActivity extends AppCompatActivity {
                 goToActivity(GesturesActivity.class);
                 break;
             case R.id.animatorButton:
-                goToActivity(GesturesActivity.class);
+                goToActivity(AnimatorActivity.class);
+                break;
+            case R.id.layoutsButton:
+                goToActivity(LayoutsActivity.class);
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + v.getId());
