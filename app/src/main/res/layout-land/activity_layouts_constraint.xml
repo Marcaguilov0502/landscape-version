@@ -16,62 +16,70 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <RelativeLayout
+    <android.support.constraint.ConstraintLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="60dp"
+        android:layout_margin="50dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar2"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2">
 
         <Button
             android:id="@+id/toastButton"
             style="@style/Widget.AppCompat.Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="76dp"
             android:background="@color/layout_blue"
             android:backgroundTint="@color/layout_blue"
             android:onClick="toast"
             android:text="toast"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/countView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="0dp"
-            android:layout_toEndOf="@+id/toastButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:background="@color/layout_yellow"
             android:gravity="center"
             android:text="0"
             android:textAlignment="center"
             android:textColor="@color/layout_blue"
             android:textSize="150sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/toastButton"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/countButton"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/toastButton"
+            android:layout_marginTop="4dp"
             android:background="@color/layout_blue"
             android:backgroundTint="@color/layout_blue"
             android:onClick="add"
             android:text="Count"
-            android:textColor="#FFFFFF" />
-    </RelativeLayout>
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toStartOf="@+id/countView"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toastButton" />
+    </android.support.constraint.ConstraintLayout>
 
     <Button
-        android:id="@+id/relative"
+        android:id="@+id/constraint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="changeLayout"
         android:text="next layout"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

@@ -2,6 +2,7 @@ package com.marcapps.testapp;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Layout;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,6 +27,28 @@ public class LayoutsActivity extends AppCompatActivity {
     public void add(View v) {
         count++;
         countView.setText(String.valueOf(count));
+    }
+
+    public void changeLayout(View v) {
+
+        switch (v.getId()) {
+            case R.id.linear:
+                setContentView(R.layout.activity_layouts_relative);
+                countView = findViewById(R.id.countView);
+                count = 0;
+                break;
+            case R.id.relative:
+                setContentView(R.layout.activity_layouts_constraint);
+                countView = findViewById(R.id.countView);
+                count = 0;
+                break;
+            case R.id.constraint:
+                setContentView(R.layout.activity_layouts_linear);
+                countView = findViewById(R.id.countView);
+                count = 0;
+                break;
+        }
+
     }
 
 }
