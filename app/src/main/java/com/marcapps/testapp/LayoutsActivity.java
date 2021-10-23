@@ -35,17 +35,17 @@ public class LayoutsActivity extends AppCompatActivity {
             case R.id.linear:
                 setContentView(R.layout.activity_layouts_relative);
                 countView = findViewById(R.id.countView);
-                count = 0;
+                countView.setText(String.valueOf(count));
                 break;
             case R.id.relative:
                 setContentView(R.layout.activity_layouts_constraint);
                 countView = findViewById(R.id.countView);
-                count = 0;
+                countView.setText(String.valueOf(count));
                 break;
             case R.id.constraint:
                 setContentView(R.layout.activity_layouts_linear);
                 countView = findViewById(R.id.countView);
-                count = 0;
+                countView.setText(String.valueOf(count));
                 break;
         }
 

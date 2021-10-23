@@ -35,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.layoutsButton:
                 goToActivity(LayoutsActivity.class);
                 break;
+            case R.id.scrollViewButton:
+                goToActivity(ScrollViewActivity .class);
+                break;
             default:
                 throw new IllegalStateException("Unexpected value: " + v.getId());
         }
