@@ -8,8 +8,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    /*  ToDoList:
-
+    /*  ToDo
         spring animations
         fling animations
      */
@@ -36,7 +35,13 @@ public class MainActivity extends AppCompatActivity {
                 goToActivity(LayoutsActivity.class);
                 break;
             case R.id.scrollViewButton:
-                goToActivity(ScrollViewActivity .class);
+                goToActivity(ScrollViewActivity.class);
+                break;
+            case R.id.addViewButton:
+                goToActivity(AddViewsActivity.class);
+                break;
+            case R.id.spotifyScreenButton:
+                goToActivity(SpotifyScreenActivity.class);
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + v.getId());

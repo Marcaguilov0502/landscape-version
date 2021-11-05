@@ -5,6 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ScrollView
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+         android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
     <LinearLayout
         android:layout_width="409dp"
         android:layout_height="729dp"
@@ -54,5 +60,22 @@
             android:onClick="selectActivity"
             android:text="Scroll View" />
 
+        <Button
+            android:id="@+id/addViewButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="selectActivity"
+            android:text="Add views" />
+
+        <Button
+            android:id="@+id/spotifyScreenButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="selectActivity"
+            android:text="SpotifyScreen" />
+
     </LinearLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>
